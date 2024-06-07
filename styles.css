@@ -1,0 +1,73 @@
+h1 {
+  font-size: clamp(4.2rem, 20vw, 5.61rem);
+}
+
+h2 {
+  font-size: clamp(3.15rem, 5vw, 5.61rem);
+}
+
+h3 {
+  font-size: clamp(2.36rem, 5vw, 3.15rem);
+}
+
+h4 {
+  font-size: clamp(1.77rem, 5vw, 2.36rem);
+}
+
+h5 {
+  font-size: clamp(1.33rem, 5vw, 1.77rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 5vw, 1.33rem);
+}
+
+p {
+  font-size: 1rem;
+}
+
+body {
+  background-color: #F7F6BB;
+  color: #052319;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.Book {
+  max-width: 20rem;
+}
+
+.BookPhoto {
+  width: 100px;
+  height: 140px;
+  overflow: hidden;
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+.BookPhoto > img {
+  width: 100%;
+}
+
+.Book a {
+  display: block;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #FCDC2A;
+  color: #052319;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.Book a:hover {
+  background-color: #bddd5c;
+}
+
+.Book a:active {
+  background-color: #d2f3a0;
+}/*# sourceMappingURL=styles.css.map */
