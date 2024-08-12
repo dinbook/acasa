@@ -1,22 +1,45 @@
-$primary: #d2f3a0;
-$secondary: #bddd5c;
-$cta: #FCDC2A;
-$light: #F7F6BB;
-$dark: #052319;
+:root { 
+    --primary: #fde0d3;
+    --secondary: #feeae1;
+    --cta: #2b3e08;
+    --light: #fff5f0;
+    --dark: #1F1300;
+}
 
 h1 { font-size: clamp(4.20rem, 20vw, 5.61rem); }
-h2 { font-size: clamp(3.15rem, 5vw, 5.61rem); }
+h2 { font-size: clamp(3.15rem, 5vw, 4.20rem); }
 h3 { font-size: clamp(2.36rem, 5vw, 3.15rem); }
 h4 { font-size: clamp(1.77rem, 5vw, 2.36rem); }
 h5 { font-size: clamp(1.33rem, 5vw, 1.77rem); }
 h6 { font-size: clamp(1.00rem, 5vw, 1.33rem); }
 p { font-size: 1rem; }
 
-body { background-color: $light; color: $dark; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 16px; line-height: 1.8; }
+body { margin: 0; padding: 0; background-color: var(--primary); color: var(--dark); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 16px; line-height: 1.8; }
 
-.Book { max-width: 20rem; }
-    .BookPhoto { width: 100px; height: 140px; overflow: hidden; float: left; margin: 0 1rem 1rem 0; }
-        .BookPhoto > img { width: 100%; }
-    .Book a { display: block; border: none; border-radius: 0.5rem; padding: 1rem; background-color: $cta; color: $dark; text-decoration: none; width: 100%; text-align: center; font-weight: bolder; cursor: pointer; }
-        .Book a:hover { background-color: $secondary; }
-        .Book a:active { background-color: $primary; }
+header a { display: flex; gap: 1rem; align-items: center; margin: 0; padding: 0.4rem; background-color: var(--secondary); color: var(--dark); text-decoration: none; box-shadow: 0px 4px 4px var(--dark); }
+header a:hover { background-color: var(--cta); color: var(--light); }
+
+main { padding: 0; }
+article { padding: 0.4rem; margin-bottom: 2rem;  }
+p, h1, h2, h3, h4, h5, h6 { margin: 0; }
+h2 { margin: 1rem -0.4rem; padding: 1rem 0.4rem; background: linear-gradient(var(--secondary) 70%, transparent); box-shadow: 0px -4px 4px var(--dark); }
+
+// .Carousel {  }
+    .carousel { display: flex; align-items: center; gap: 0.5rem; }
+
+// .Categories {  }
+    .Categories h2 { margin-bottom: -2rem; }
+    // details {  }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display:none; }
+        // summary {  }
+        summary:hover, summary:focus { cursor: pointer; }
+        summary:hover p:last-child, summary:focus p:last-child { color: var(--cta); text-decoration: none; }
+            summary h3 { display: flex; align-items: center; gap: 0.4rem; margin-top: 3rem; color: var(--cta); }
+            // summary h4 {  }
+            summary img, details img { width: 100%; }
+            // summary p {  }
+            summary p:last-child { color: var(--dark); text-decoration: underline; }
+        .Books { display: flex; flex-direction: column; gap: 1rem; }
+            .Book { box-sizing: border-box; border: 5px solid var(--dark); border-radius: 1rem; padding: 1rem; }
+            .Book:focus, .Book:hover { border-color: var(--cta); background-color: var(--light); color: var(--cta); }

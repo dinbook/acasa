@@ -3,18 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/site.webmanifest">
+    <link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#375c00">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles.css">
     <title>DinBook | Acasa</title>
 </head>
 <body>
-    <h1>DinBook</h1>
-    <h5>Cumpara carti de la Dina cu mare incredere!</h5>
+    <header>
+        <a href="./">
+            <img src="./assets/img/logo.svg" alt="logo of Dina's online book store">
+            <h5>Dina's Books</h5>
+        </a>
+    </header>
+    <main>
+        <article class="Hero">
+            <h1>DinBook</h1>
+            <p>Bine ati venit pe pagina DinBook! Aici gasiti materiale crestine precum: Arca lui Noe TODO pentru cei mici. Procesul este simplu: Va alegeti materialul dorit din lista de mai jos apasand pe butonul "Comanda acum". Dupa aceea, veti fi redirectionati catre un formular unde va trebui sa introduceti date precum: nume, metoda livrare, mail sau whatsapp, dovada platii.</p>
+        </article>
 
-    <div class="Book">
-        <div class="BookPhoto"><img src="./noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani"></div>
-        <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
-        <a href="https://indavid04.github.io/portofolio/">Cumpara acum!</a>
-    </div>
+        <article class="Carousel">
+            <h2>In premiera</h2>
+            <section class="carousel">
+                <svg width="40" height="80" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M38.7273 80L40 77.4041C39.1515 76.1455 38.2424 74.4936 37.2727 72.4484C36.1818 70.5605 35.5758 68.7512 35.4545 67.0206L34.5455 67.4926C31.3939 63.7168 28.303 59.8623 25.2727 55.9292C22.2424 51.9961 19.6364 47.591 17.4545 42.7139C16.1212 41.4553 14.6061 40.1967 12.9091 38.938C11.0909 37.5221 9.87879 35.7915 9.27273 33.7463C9.87879 32.0157 10.9091 30.7571 12.3636 29.9705C13.697 29.1839 14.4848 27.8466 14.7273 25.9587L15.0909 27.1386C16.5455 25.5654 18.0606 23.7561 19.6364 21.7109C21.2121 19.5084 21.7576 17.0698 21.2727 14.3953L21.8182 14.1593L22.9091 14.6313L23.6364 14.3953C24.4848 13.294 25.3939 12.1141 26.3636 10.8555C27.3333 9.59685 28.0606 8.25959 28.5455 6.84366C29.2727 5.89971 29.9394 5.03441 30.5455 4.24779C31.1515 3.46116 31.5758 2.43855 31.8182 1.17994L30.5455 0C29.0909 0 27.3939 1.02261 25.4545 3.06784C23.3939 5.11307 21.3333 7.55162 19.2727 10.3835C17.2121 13.2153 15.2727 15.9685 13.4545 18.6431C11.5152 21.3176 9.9394 23.3628 8.72727 24.7788C6.66667 27.1386 4.72728 29.4985 2.90909 31.8584C0.969696 34.061 0 37.1288 0 41.0619C0 41.6912 0.0606079 42.3206 0.181824 42.9499C0.303032 43.4218 0.424244 43.8938 0.545456 44.3658V43.8938L1.09091 42.7139L1.63636 43.1858L2.18182 43.8938L1.45455 45.5457L3.81818 46.7257L4.72728 45.3097L5.63637 47.6696C7.81818 49.5575 9.87879 51.6814 11.8182 54.0413C13.6364 56.2439 15.5152 58.4464 17.4545 60.649L19.0909 59.469L20.7273 60.885C20.3636 61.9862 19.6364 62.9302 18.5455 63.7168C19.5152 64.8181 20.5455 65.4474 21.6364 65.6047L21.8182 65.1327L21.2727 63.9528L21.6364 63.2448C22.4848 64.3461 23.3333 65.8407 24.1818 67.7286L24 68.6726C26.303 70.8751 28.7879 72.6844 31.4545 74.1003C34.1212 75.6735 36.5455 77.6401 38.7273 80Z" fill="#052319"/>
+                </svg>
+
+                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani" width="200">
+
+                <svg width="40" height="80" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.27273 80L0 77.4041C0.848486 76.1455 1.75758 74.4936 2.72727 72.4484C3.81818 70.5605 4.42424 68.7512 4.54546 67.0206L5.45455 67.4926C8.60606 63.7168 11.697 59.8623 14.7273 55.9292C17.7576 51.9961 20.3636 47.591 22.5455 42.7139C23.8788 41.4553 25.3939 40.1967 27.0909 38.938C28.9091 37.5221 30.1212 35.7915 30.7273 33.7463C30.1212 32.0157 29.0909 30.7571 27.6364 29.9705C26.303 29.1839 25.5152 27.8466 25.2727 25.9587L24.9091 27.1386C23.4545 25.5654 21.9394 23.7561 20.3636 21.7109C18.7879 19.5084 18.2424 17.0698 18.7273 14.3953L18.1818 14.1593L17.0909 14.6313L16.3636 14.3953C15.5152 13.294 14.6061 12.1141 13.6364 10.8555C12.6667 9.59685 11.9394 8.25959 11.4545 6.84366C10.7273 5.89971 10.0606 5.03441 9.45455 4.24779C8.84849 3.46116 8.42424 2.43855 8.18182 1.17994L9.45455 0C10.9091 0 12.6061 1.02261 14.5455 3.06784C16.6061 5.11307 18.6667 7.55162 20.7273 10.3835C22.7879 13.2153 24.7273 15.9685 26.5455 18.6431C28.4848 21.3176 30.0606 23.3628 31.2727 24.7788C33.3333 27.1386 35.2727 29.4985 37.0909 31.8584C39.0303 34.061 40 37.1288 40 41.0619C40 41.6913 39.9394 42.3206 39.8182 42.9499C39.697 43.4218 39.5758 43.8938 39.4545 44.3658V43.8938L38.9091 42.7139L38.3636 43.1858L37.8182 43.8938L38.5455 45.5457L36.1818 46.7257L35.2727 45.3097L34.3636 47.6696C32.1818 49.5575 30.1212 51.6814 28.1818 54.0413C26.3636 56.2439 24.4849 58.4464 22.5455 60.649L20.9091 59.469L19.2727 60.885C19.6364 61.9862 20.3636 62.9302 21.4545 63.7168C20.4848 64.8181 19.4545 65.4474 18.3636 65.6047L18.1818 65.1327L18.7273 63.9528L18.3636 63.2448C17.5152 64.3461 16.6667 65.8407 15.8182 67.7286L16 68.6726C13.697 70.8751 11.2121 72.6844 8.54545 74.1003C5.87879 75.6736 3.45455 77.6401 1.27273 80Z" fill="#052319"/>
+                </svg>
+            </section>
+        </article>
+
+        <article class="Categories">
+            <h2>Categorii</h2>
+            <details>
+                <summary>
+                    <h3>
+                        <svg width="20" height="40" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.27273 80L0 77.4041C0.848486 76.1455 1.75758 74.4936 2.72727 72.4484C3.81818 70.5605 4.42424 68.7512 4.54546 67.0206L5.45455 67.4926C8.60606 63.7168 11.697 59.8623 14.7273 55.9292C17.7576 51.9961 20.3636 47.591 22.5455 42.7139C23.8788 41.4553 25.3939 40.1967 27.0909 38.938C28.9091 37.5221 30.1212 35.7915 30.7273 33.7463C30.1212 32.0157 29.0909 30.7571 27.6364 29.9705C26.303 29.1839 25.5152 27.8466 25.2727 25.9587L24.9091 27.1386C23.4545 25.5654 21.9394 23.7561 20.3636 21.7109C18.7879 19.5084 18.2424 17.0698 18.7273 14.3953L18.1818 14.1593L17.0909 14.6313L16.3636 14.3953C15.5152 13.294 14.6061 12.1141 13.6364 10.8555C12.6667 9.59685 11.9394 8.25959 11.4545 6.84366C10.7273 5.89971 10.0606 5.03441 9.45455 4.24779C8.84849 3.46116 8.42424 2.43855 8.18182 1.17994L9.45455 0C10.9091 0 12.6061 1.02261 14.5455 3.06784C16.6061 5.11307 18.6667 7.55162 20.7273 10.3835C22.7879 13.2153 24.7273 15.9685 26.5455 18.6431C28.4848 21.3176 30.0606 23.3628 31.2727 24.7788C33.3333 27.1386 35.2727 29.4985 37.0909 31.8584C39.0303 34.061 40 37.1288 40 41.0619C40 41.6913 39.9394 42.3206 39.8182 42.9499C39.697 43.4218 39.5758 43.8938 39.4545 44.3658V43.8938L38.9091 42.7139L38.3636 43.1858L37.8182 43.8938L38.5455 45.5457L36.1818 46.7257L35.2727 45.3097L34.3636 47.6696C32.1818 49.5575 30.1212 51.6814 28.1818 54.0413C26.3636 56.2439 24.4849 58.4464 22.5455 60.649L20.9091 59.469L19.2727 60.885C19.6364 61.9862 20.3636 62.9302 21.4545 63.7168C20.4848 64.8181 19.4545 65.4474 18.3636 65.6047L18.1818 65.1327L18.7273 63.9528L18.3636 63.2448C17.5152 64.3461 16.6667 65.8407 15.8182 67.7286L16 68.6726C13.697 70.8751 11.2121 72.6844 8.54545 74.1003C5.87879 75.6736 3.45455 77.6401 1.27273 80Z" fill="currentColor"/>
+                        </svg>
+                        Copii 2-3 ani
+                    </h3>
+                    <p>Aceasta categorie cuprinde carti pentru copii cu varsta cuprinsa intre 2 si 3 ani. Cei mici se vor bucura de activitatile interactive.</p>
+                    <p>Arata cartile</p>
+                </summary>
+                <div class="Books">
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                </div>
+            </details>
+            <details>
+                <summary>
+                    <h3>
+                        <svg width="20" height="40" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.27273 80L0 77.4041C0.848486 76.1455 1.75758 74.4936 2.72727 72.4484C3.81818 70.5605 4.42424 68.7512 4.54546 67.0206L5.45455 67.4926C8.60606 63.7168 11.697 59.8623 14.7273 55.9292C17.7576 51.9961 20.3636 47.591 22.5455 42.7139C23.8788 41.4553 25.3939 40.1967 27.0909 38.938C28.9091 37.5221 30.1212 35.7915 30.7273 33.7463C30.1212 32.0157 29.0909 30.7571 27.6364 29.9705C26.303 29.1839 25.5152 27.8466 25.2727 25.9587L24.9091 27.1386C23.4545 25.5654 21.9394 23.7561 20.3636 21.7109C18.7879 19.5084 18.2424 17.0698 18.7273 14.3953L18.1818 14.1593L17.0909 14.6313L16.3636 14.3953C15.5152 13.294 14.6061 12.1141 13.6364 10.8555C12.6667 9.59685 11.9394 8.25959 11.4545 6.84366C10.7273 5.89971 10.0606 5.03441 9.45455 4.24779C8.84849 3.46116 8.42424 2.43855 8.18182 1.17994L9.45455 0C10.9091 0 12.6061 1.02261 14.5455 3.06784C16.6061 5.11307 18.6667 7.55162 20.7273 10.3835C22.7879 13.2153 24.7273 15.9685 26.5455 18.6431C28.4848 21.3176 30.0606 23.3628 31.2727 24.7788C33.3333 27.1386 35.2727 29.4985 37.0909 31.8584C39.0303 34.061 40 37.1288 40 41.0619C40 41.6913 39.9394 42.3206 39.8182 42.9499C39.697 43.4218 39.5758 43.8938 39.4545 44.3658V43.8938L38.9091 42.7139L38.3636 43.1858L37.8182 43.8938L38.5455 45.5457L36.1818 46.7257L35.2727 45.3097L34.3636 47.6696C32.1818 49.5575 30.1212 51.6814 28.1818 54.0413C26.3636 56.2439 24.4849 58.4464 22.5455 60.649L20.9091 59.469L19.2727 60.885C19.6364 61.9862 20.3636 62.9302 21.4545 63.7168C20.4848 64.8181 19.4545 65.4474 18.3636 65.6047L18.1818 65.1327L18.7273 63.9528L18.3636 63.2448C17.5152 64.3461 16.6667 65.8407 15.8182 67.7286L16 68.6726C13.697 70.8751 11.2121 72.6844 8.54545 74.1003C5.87879 75.6736 3.45455 77.6401 1.27273 80Z" fill="currentColor"/>
+                        </svg>
+                        Copii 4-8 ani
+                    </h3>
+                    <p>Aceasta categorie cuprinde carti pentru copii cu varsta cuprinsa intre 2 si 3 ani. Cei mici se vor bucura de activitatile interactive.</p>
+                    <p>Arata cartile</p>
+                </summary>
+                <div class="Books">
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                </div>
+            </details>
+            <details>
+                <summary>
+                    <h3>
+                        <svg width="20" height="40" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.27273 80L0 77.4041C0.848486 76.1455 1.75758 74.4936 2.72727 72.4484C3.81818 70.5605 4.42424 68.7512 4.54546 67.0206L5.45455 67.4926C8.60606 63.7168 11.697 59.8623 14.7273 55.9292C17.7576 51.9961 20.3636 47.591 22.5455 42.7139C23.8788 41.4553 25.3939 40.1967 27.0909 38.938C28.9091 37.5221 30.1212 35.7915 30.7273 33.7463C30.1212 32.0157 29.0909 30.7571 27.6364 29.9705C26.303 29.1839 25.5152 27.8466 25.2727 25.9587L24.9091 27.1386C23.4545 25.5654 21.9394 23.7561 20.3636 21.7109C18.7879 19.5084 18.2424 17.0698 18.7273 14.3953L18.1818 14.1593L17.0909 14.6313L16.3636 14.3953C15.5152 13.294 14.6061 12.1141 13.6364 10.8555C12.6667 9.59685 11.9394 8.25959 11.4545 6.84366C10.7273 5.89971 10.0606 5.03441 9.45455 4.24779C8.84849 3.46116 8.42424 2.43855 8.18182 1.17994L9.45455 0C10.9091 0 12.6061 1.02261 14.5455 3.06784C16.6061 5.11307 18.6667 7.55162 20.7273 10.3835C22.7879 13.2153 24.7273 15.9685 26.5455 18.6431C28.4848 21.3176 30.0606 23.3628 31.2727 24.7788C33.3333 27.1386 35.2727 29.4985 37.0909 31.8584C39.0303 34.061 40 37.1288 40 41.0619C40 41.6913 39.9394 42.3206 39.8182 42.9499C39.697 43.4218 39.5758 43.8938 39.4545 44.3658V43.8938L38.9091 42.7139L38.3636 43.1858L37.8182 43.8938L38.5455 45.5457L36.1818 46.7257L35.2727 45.3097L34.3636 47.6696C32.1818 49.5575 30.1212 51.6814 28.1818 54.0413C26.3636 56.2439 24.4849 58.4464 22.5455 60.649L20.9091 59.469L19.2727 60.885C19.6364 61.9862 20.3636 62.9302 21.4545 63.7168C20.4848 64.8181 19.4545 65.4474 18.3636 65.6047L18.1818 65.1327L18.7273 63.9528L18.3636 63.2448C17.5152 64.3461 16.6667 65.8407 15.8182 67.7286L16 68.6726C13.697 70.8751 11.2121 72.6844 8.54545 74.1003C5.87879 75.6736 3.45455 77.6401 1.27273 80Z" fill="currentColor"/>
+                        </svg>
+                        Copii 9-12 ani
+                    </h3>
+                    <p>Aceasta categorie cuprinde carti pentru copii cu varsta cuprinsa intre 2 si 3 ani. Cei mici se vor bucura de activitatile interactive.</p>
+                    <p>Arata cartile</p>
+                </summary>
+                <div class="Books">
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                    <div class="Book">
+                        <details>
+                            <summary>
+                                <h4>Noe si corabia</h4>
+                                <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                                <p>Povestea lui Noe este una din cele mai interesante activități pentru copii. Aceștia vor intelege cât de important este să ascultam si sa lucram pentru Dumnezeu.</p>
+                                <p>Vezi mai mult...</p>
+                            </summary>
+                            <div>
+                                Mai Dina pe aci vine mai mult text. Ala de sus e ala de iti ziceam ca trebe sa fie mai scurt. Daca vrei se pot adauga si niste pozi aici, sa fie mai multe. Insa daca cineva vrea sa le vada trebe sa apese pe chestia asta sa se vada mai multe. Altfel, tot ce citesti aici ramane ascuns. No, bravo daca ai citit pana aici, textul asta o sa fie inlocuit cu ce vrei tu, numai sa te apuci de scris.
+                            </div>
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                            <img src="./assets/img/noe.jpg" alt="Noe si corabia - carte crestina pentru copii de 4-8 ani">
+                        </details>
+                    </div>
+                </div>
+            </details>
+        </article>
+    </main>
+    <footer></footer>
 
 </body>
 </html>
