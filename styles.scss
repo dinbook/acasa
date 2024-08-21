@@ -1,6 +1,6 @@
 :root { 
     --primary: #dceab2;
-    --secondary: hsl(69, 56%, 20%);
+    --secondary: #475016;
     --cta: #880d1e;
     --light: #ffe5ec;
     --dark: #1b2021;
@@ -20,7 +20,6 @@ h6 { font-size: clamp(1.00rem, 5vw, 1.33rem); }
 p { font-size: 1rem; }
 
 body { margin: 0; padding: 0; background-color: var(--light); color: var(--dark); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 16px; line-height: 1.8; }
-
 blockquote { border-left: 0.5rem solid var(--dark); padding-left: 1rem; font-size: 1rem; 
     @media (min-width: 720px) { font-size: 1.2rem; }
     @media (min-width: 960px) { font-size: 1.5rem; }
@@ -28,71 +27,23 @@ blockquote { border-left: 0.5rem solid var(--dark); padding-left: 1rem; font-siz
     @media (min-width: 2000px) { width: 72rem; }
 }
 
-header a { display: flex; gap: 1rem; align-items: center; margin: 0; padding: 0.4rem; background-color: var(--primary); color: var(--dark); text-decoration: none; box-shadow: 0px 4px 4px var(--dark);
-    @media (min-width: 500px) { padding: 0.4rem 4rem; }
-    @media (min-width: 1440px) { padding: 0.4rem 12rem; }
-}
-header a:hover { background-color: var(--cta); color: var(--light); }
+header { position: absolute; top: 0; left: 10%; } 
+    h1 { margin: 0; }
+    header p { margin: -1rem 0 0; }
 
-main { padding: 0;
-    @media (min-width: 500px) { padding: 0.4rem 4rem; }
-    @media (min-width: 1440px) { padding: 0.4rem 12rem; }
-}
-article { padding: 0.4rem; margin-bottom: 2rem;  }
-p, h1, h2, h3, h4, h5, h6 { margin: 0; }
-h2 { margin: 1rem -0.4rem; padding: 1rem 0.4rem 2rem; background: linear-gradient(var(--primary) 70%, transparent); box-shadow: 0px -4px 4px var(--dark); 
-    @media (min-width: 500px) { margin: 1rem -4.4rem; padding: 1rem 4.4rem; }
-    @media (min-width: 1440px) { margin: 1rem -12.4rem; padding: 1rem 12.4rem; }
-}
+main {  }
 
-.Hero {
-    @media (min-width: 850px) { display: flex; justify-content: space-between; gap: 4rem; }
+.HeroParallax { position: relative; width: 100%; height: 200vw; overflow: hidden; 
+    @media (min-width: 580px) { height: 180vw; }
+    @media (min-width: 720px) { height: 170vw; }
+    @media (min-width: 960px) { height: 150vw; }
+    @media (min-width: 1080px) { height: 140vw; }
 }
-    .About {  }
-        .About p:first-of-type { margin-top: 0; }
-        .About p { margin: 2rem 0; 
-            @media (min-width: 720px) { font-size: 1.2rem; }
-            @media (min-width: 960px) { font-size: 1.5rem; }
-            @media (min-width: 1600px) { font-size: 2rem; }
-            @media (min-width: 2000px) { width: 72rem; }
-        }
-    .Carousel { flex-basis: 20rem; 
-        @media (min-width: 850px) { margin-top: -3.4rem; }
-    }
-    .Hero .Carousel { 
-        @media (min-width: 850px) { position: sticky; top: 5rem; height: min-content; }
-    }
-        .Carousel h2 { 
-            @media (min-width: 850px) { margin-top: -7rem; width: 18rem; box-shadow: none; background: transparent; }
-            @media (min-width: 1035px) { width: 20rem; }
-            @media (min-width: 1150px) { width: 22rem; }
-            @media (min-width: 1265px) { width: 24rem; }
-        }
-        .carousel { width: 100%; 
-            @media (min-width: 850px) { margin-top: -3rem; }
-        }
-            .carousel img { width: 100%; border-radius: 0.8rem; }
-            .Arrows { display: flex; width: 100%; }
-                .Arrows button { display: flex; justify-content: center; align-items: center; flex-basis: 50%; flex-grow: 1; margin: 0; border: none; padding: 1rem; background-color: var(--cta); color: var(--light); cursor: pointer; }   
-                    .carousel svg { width: 100%; }
-                    .Arrows button:focus, .Arrows button:hover { background-color: var(--dark); }
-                    .Arrows button:active { background-color: var(--cta); color: var(--dark); }
-.Categories {  }
-    .Categories h2 {  }
-    details { background-color: var(--dark); margin-bottom: 2rem; border-radius: 1rem; padding: 0.4rem; }
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display:none; }
-        summary { display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background-color: var(--dark); color: var(--light); }
-            summary:hover, summary:focus { cursor: pointer; }
-            summary h4 {  }
-            details[open] summary svg { transform: rotate(180deg); }
-        .Books { display: flex; flex-direction: column; gap: 1rem; 
-            @media (min-width: 700px) { display: grid; grid-template-columns: 1fr 1fr; }
-            @media (min-width: 1035px) { grid-template-columns: 1fr 1fr 1fr; }
-        }    
-            .Book { box-sizing: border-box; border-radius: 1rem; padding: 1rem; background-color: var(--light); }
-                .Book h5 { margin-bottom: 0.5rem; }
-                .Book p {  }
-                .Book .carousel { margin-bottom: 2rem; }
-                    .Book img { margin-top: 1rem; border-radius: 0.5rem; width: 100%; }
-                    .Book .Arrows {  }
+    .HeroParallax img { position: absolute; object-fit: cover; }
+    #sun { bottom: 125vw; left: 50%; right: 50%; width: 7%; }
+    #mountains { bottom: 95vw; width: 100%; }
+    #hills { bottom: 0; width: 100%; }
+    #clouds { bottom: 120vw; right: 40vw; width: 100%; }
+    #right { bottom: 0; right: 0; width: 30%; }
+    #left { bottom: 0; left: 0; width: 30%; }
+    #book { bottom: 0; width: 100%; }
