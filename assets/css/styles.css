@@ -36,6 +36,7 @@ h6 {
 
 p {
   font-size: 1rem;
+  margin: 0;
 }
 
 body {
@@ -46,6 +47,7 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 16px;
   line-height: 1.8;
+  scroll-behavior: smooth;
 }
 
 blockquote {
@@ -75,43 +77,79 @@ blockquote {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 10%;
+  z-index: -1;
+  width: 100%;
+  text-align: center;
 }
 
 h1 {
   margin: 0;
+  padding: 0;
 }
 
 header p {
-  margin: -1rem 0 0;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 18rem;
+  font-size: 1.33rem;
+  line-height: 1;
+}
+
+section:not(:first-of-type) {
+  padding: 0 1rem;
+}
+@media (min-width: 720px) {
+  section:not(:first-of-type) {
+    padding: 0 10rem;
+  }
+}
+@media (min-width: 960px) {
+  section:not(:first-of-type) {
+    padding: 0 20rem;
+  }
+}
+@media (min-width: 1600px) {
+  section:not(:first-of-type) {
+    padding: 0 30rem;
+  }
+}
+@media (min-width: 2000px) {
+  section:not(:first-of-type) {
+    padding: 0 40rem;
+  }
 }
 
 .HeroParallax {
   position: relative;
+  padding-top: 20rem;
   width: 100%;
-  height: 200vw;
+  height: 150vw;
   overflow: hidden;
+}
+@media (min-width: 380px) {
+  .HeroParallax {
+    padding-top: 30rem;
+    height: 130vw;
+  }
 }
 @media (min-width: 580px) {
   .HeroParallax {
-    height: 180vw;
+    padding-top: 40rem;
+    height: 110vw;
   }
 }
 @media (min-width: 720px) {
   .HeroParallax {
-    height: 170vw;
+    padding-top: 50rem;
+    height: 90vw;
   }
 }
-@media (min-width: 960px) {
+@media (orientation: landscape) {
   .HeroParallax {
-    height: 150vw;
-  }
-}
-@media (min-width: 1080px) {
-  .HeroParallax {
-    height: 140vw;
+    padding-top: 52rem;
+    height: 70vw;
   }
 }
 
@@ -124,39 +162,60 @@ header p {
 #sun {
   bottom: 125vw;
   left: 50%;
-  right: 50%;
   width: 7%;
 }
 
 #mountains {
-  bottom: 95vw;
-  width: 100%;
-}
-
-#hills {
-  bottom: 0;
+  bottom: 100vw;
   width: 100%;
 }
 
 #clouds {
   bottom: 120vw;
   right: 40vw;
+  width: 100vw;
+  opacity: 0.4;
+}
+
+#hills {
+  bottom: 7vw;
   width: 100%;
 }
 
 #right {
   bottom: 0;
   right: 0;
-  width: 30%;
+  width: 40vw;
 }
 
 #left {
   bottom: 0;
   left: 0;
-  width: 30%;
+  width: 25vw;
 }
 
 #book {
   bottom: 0;
   width: 100%;
+}
+
+.HeroAbout {
+  margin-top: -4rem;
+  padding-top: 4rem;
+  height: 400vh;
+  background-color: var(--primary);
+}
+
+.HeroAbout p {
+  color: var(--secondary);
+}
+
+.HeroAbout p span {
+  position: relative;
+  color: var(--primary);
+  transition: 0.25s;
+}
+
+.HeroAbout p span.active {
+  color: var(--dark);
 }/*# sourceMappingURL=styles.css.map */
