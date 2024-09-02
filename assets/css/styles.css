@@ -39,7 +39,7 @@ p {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--light);
+  background-color: var(--primary);
   color: var(--dark);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -73,54 +73,189 @@ blockquote {
   }
 }
 
-header {
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-header p {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 18rem;
-  font-size: 1.33rem;
-  line-height: 1.4;
-}
-
-section:not(:first-of-type) {
+.container {
   padding: 0 1rem;
 }
 @media (min-width: 540px) {
-  section:not(:first-of-type) {
+  .container {
     padding: 0 2rem;
   }
 }
 @media (min-width: 720px) {
-  section:not(:first-of-type) {
-    padding: 0 5rem;
-  }
-}
-@media (min-width: 960px) {
-  section:not(:first-of-type) {
-    padding: 0 10rem;
+  .container {
+    padding: 0 4rem;
   }
 }
 @media (min-width: 1600px) {
-  section:not(:first-of-type) {
+  .container {
     padding: 0 20rem;
   }
 }
 @media (min-width: 2000px) {
-  section:not(:first-of-type) {
+  .container {
     padding: 0 30rem;
   }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 540px) {
+  .row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.col-1 {
+  width: 58%;
+}
+
+.col-2 {
+  width: 38%;
+}
+
+.MainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark);
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.HamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+@media (min-width: 960px) {
+  .HamburgerMenu {
+    display: none;
+  }
+}
+
+.HamburgerMenu::before, .HamburgerMenu input, .HamburgerMenu::after {
+  content: "";
+  width: 3.25rem;
+  height: 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--secondary);
+  transition: 0.2s;
+}
+
+.HamburgerMenu input {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.HamburgerMenu:has(input:checked).HamburgerMenu {
+  overflow: hidden;
+}
+
+.HamburgerMenu:has(input:checked)::before {
+  rotate: 45deg;
+  transform: translate3d(5.5rem, 0, 0);
+}
+
+.HamburgerMenu:has(input:checked) input {
+  rotate: 235deg;
+  background-color: var(--dark);
+}
+
+.HamburgerMenu:has(input:checked)::after {
+  rotate: 135deg;
+  background-color: var(--dark);
+  transform: translate3d(-0.8rem, 0.8rem, 0);
+}
+
+@media (max-width: 959px) {
+  .HamburgerMenu:has(input:checked) + .Menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 8rem;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.HamburgerMenu:has(input:checked) + body {
+  height: 100px;
+  overflow: hidden;
+}
+
+.Menu {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+}
+@media (min-width: 960px) {
+  .Menu {
+    display: flex;
+    position: initial;
+    transform: translate3d(0, 0, 0);
+    background-color: var(--primary);
+  }
+}
+
+.MenuList {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 960px) {
+  .MenuList {
+    display: flex;
+    list-style: none;
+  }
+}
+
+.MenuListItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  transition: 0.2s;
+  list-style: none;
+  transition: 0.2s;
+}
+
+.MenuListItem a {
+  display: inline-block;
+  padding: 1rem;
+  width: 100%;
+  text-decoration: none;
+  color: var(--light);
+}
+@media (min-width: 960px) {
+  .MenuListItem a {
+    color: var(--dark);
+  }
+}
+
+.MenuListItem a:focus, .MenuListItem a:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.MenuListItem a:active {
+  background-color: var(--cta);
 }
 
 .HeroParallax {
@@ -128,7 +263,9 @@ section:not(:first-of-type) {
   padding-top: 20rem;
   width: 100%;
   height: 150vw;
+  background-color: var(--light);
   overflow: hidden;
+  z-index: -1;
 }
 @media (min-width: 380px) {
   .HeroParallax {
@@ -273,6 +410,10 @@ section:not(:first-of-type) {
 .HeroImage {
   width: 100%;
   max-width: 25rem;
+}
+
+.EndingParagraph {
+  padding-bottom: 4rem;
 }
 
 footer {
