@@ -10,8 +10,19 @@
   font-family: "Figtree";
   src: url("./assets/font/Figtree-VariableFont_wght.ttf");
 }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
 h1 {
-  font-size: clamp(4.2rem, 20vw, 5.61rem);
+  font-size: clamp(3.15rem, 4vw, 5.61rem);
 }
 
 h2 {
@@ -34,17 +45,6 @@ p {
   font-size: clamp(1rem, 5vw, 1.33rem);
   margin: 0;
   max-width: 80ch;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--primary);
-  color: var(--dark);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
-  scroll-behavior: smooth;
 }
 
 blockquote {
@@ -73,53 +73,18 @@ blockquote {
   }
 }
 
-.container {
-  padding: 0 1rem;
-}
-@media (min-width: 540px) {
-  .container {
-    padding: 0 2rem;
-  }
-}
-@media (min-width: 720px) {
-  .container {
-    padding: 0 4rem;
-  }
-}
-@media (min-width: 1600px) {
-  .container {
-    padding: 0 20rem;
-  }
-}
-@media (min-width: 2000px) {
-  .container {
-    padding: 0 30rem;
-  }
+img {
+  max-width: 100%;
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 540px) {
-  .row {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-
-.col-1 {
-  width: 58%;
-}
-
-.col-2 {
-  width: 38%;
-}
-
-.MainHeader {
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--primary);
   color: var(--dark);
 }
 
@@ -128,6 +93,15 @@ blockquote {
   align-items: center;
   gap: 1rem;
   text-decoration: none;
+}
+
+.LogoP {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.LogoContainer:focus, .LogoContainer:hover {
+  opacity: 0.8;
 }
 
 .HamburgerMenu {
@@ -147,7 +121,7 @@ blockquote {
 .HamburgerMenu::before, .HamburgerMenu input, .HamburgerMenu::after {
   content: "";
   width: 3.25rem;
-  height: 0.75rem;
+  height: 0.5rem;
   border-radius: 1rem;
   background-color: var(--secondary);
   transition: 0.2s;
@@ -173,30 +147,33 @@ blockquote {
 }
 
 .HamburgerMenu:has(input:checked) input {
-  rotate: 235deg;
+  rotate: 230deg;
   background-color: var(--dark);
+  height: 0.75rem;
+  transform: translate3d(-0.2rem, 0rem, 0);
 }
 
 .HamburgerMenu:has(input:checked)::after {
-  rotate: 135deg;
+  rotate: 130deg;
   background-color: var(--dark);
-  transform: translate3d(-0.8rem, 0.8rem, 0);
+  height: 0.75rem;
+  transform: translate3d(-0.7rem, 0.7rem, 0);
 }
 
 @media (max-width: 959px) {
   .HamburgerMenu:has(input:checked) + .Menu {
     display: block;
     position: absolute;
-    top: 0;
-    right: 8rem;
+    top: 3.125rem;
+    right: 0;
     bottom: 0;
     left: 0;
+    text-align: center;
   }
 }
 
-.HamburgerMenu:has(input:checked) + body {
-  height: 100px;
-  overflow: hidden;
+.HamburgerMenu:has(input:checked) + .Menu > .MenuList {
+  background-color: var(--dark);
 }
 
 .Menu {
@@ -258,6 +235,154 @@ blockquote {
   background-color: var(--cta);
 }
 
+footer {
+  padding: 2rem 0;
+  background-color: var(--dark);
+  color: var(--light);
+  text-align: center;
+}
+
+footer a {
+  color: var(--light);
+}
+
+footer a:focus, footer a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 1rem;
+}
+@media (min-width: 540px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 720px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    padding: 0 10rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-1 {
+    width: 69%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-2 {
+    max-width: 29%;
+  }
+}
+
+.SectionTitle {
+  border-bottom: 4px solid var(--dark);
+}
+
+.CategoryTitle {
+  position: sticky;
+  top: 3.125rem;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.active {
+  background: linear-gradient(to top, var(--secondary) 10%, var(--primary) 10%);
+}
+
+@media (min-width: 540px) {
+  .align-right {
+    text-align: right;
+  }
+}
+
+@media (min-width: 540px) {
+  #aboutCite {
+    margin: 0;
+    width: 50rem;
+  }
+}
+
+/*T**********T*/
+/*|index.html|*/
+/*|**********|*/
+.HeroSection {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--light);
+  color: var(--dark);
+}
+@media (min-width: 1080px) {
+  .HeroSection {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.HeroMotto {
+  margin: 0 -1rem;
+  line-height: 1.25;
+  text-align: center;
+}
+@media (min-width: 400px) {
+  .HeroMotto {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.HeroCTA {
+  display: inline-block;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  background-color: var(--cta);
+  color: var(--light);
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 1rem 1rem var(--dark);
+}
+
+.HeroCTA:focus, .HeroCTA:hover {
+  background-color: var(--dark);
+}
+
+.HeroCTA:active {
+  background-color: var(--cta);
+}
+
+.HeroImg {
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem var(--dark);
+}
+
+/*|**********|*/
+/*|index.html|*/
+/*U**********U*/
+/*T***********T*/
+/*|despre.html|*/
+/*|***********|*/
 .HeroParallax {
   position: relative;
   padding-top: 20rem;
@@ -289,6 +414,19 @@ blockquote {
   .HeroParallax {
     padding-top: 52rem;
     height: 70vw;
+  }
+}
+
+.ParallaxText {
+  position: fixed;
+  top: 1rem;
+  text-align: center;
+  line-height: 1.25;
+}
+@media (min-width: 960px) {
+  .ParallaxText {
+    margin-top: 3rem;
+    padding: 0 10rem;
   }
 }
 
@@ -339,12 +477,11 @@ blockquote {
 }
 
 .HeroAbout {
-  margin-top: -4rem;
-  padding-top: 4rem;
   background-color: var(--primary);
 }
 
 .HeroAbout h2 {
+  margin: 0;
   padding-top: 4rem;
 }
 
@@ -355,6 +492,7 @@ blockquote {
   .About {
     display: flex;
     gap: 1rem;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -387,9 +525,6 @@ blockquote {
   }
 }
 
-.AboutP {
-  max-width: 80ch;
-}
 @media (min-width: 540px) {
   .About p.Noah {
     order: 1;
@@ -416,18 +551,6 @@ blockquote {
   padding-bottom: 4rem;
 }
 
-footer {
-  padding: 2rem 0;
-  background-color: var(--dark);
-  color: var(--light);
-  text-align: center;
-}
-
-footer a {
-  color: var(--light);
-}
-
-footer a:focus, footer a:hover {
-  color: var(--primary);
-  text-decoration: none;
-}/*# sourceMappingURL=styles.css.map */
+/*|***********|*/
+/*|despre.html|*/
+/*U***********U*//*# sourceMappingURL=styles.css.map */

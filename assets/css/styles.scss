@@ -11,14 +11,15 @@
     src: url('./assets/font/Figtree-VariableFont_wght.ttf');
 }
 
-h1 { font-size: clamp(4.20rem, 20vw, 5.61rem); }
+body { margin: 0; padding: 0; background-color: var(--light); color: var(--dark); font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.8; scroll-behavior: smooth; }
+
+h1 { font-size: clamp(3.15rem, 4vw, 5.61rem); }
 h2 { font-size: clamp(2.36rem, 5vw, 3.15rem); }
 h3 { font-size: clamp(1.77rem, 5vw, 2.36rem); }
 h4 { font-size: clamp(1.33rem, 5vw, 1.77rem); }
 h5 { font-size: clamp(1.00rem, 5vw, 1.33rem); }
 p { font-size: clamp(1.00rem, 5vw, 1.33rem); margin: 0; max-width: 80ch; }
 
-body { margin: 0; padding: 0; background-color: var(--primary); color: var(--dark); font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.8; scroll-behavior: smooth; }
 blockquote { border-left: 0.5rem solid var(--dark); padding-left: 1rem; font-size: 1rem; 
     @media (min-width: 720px) { font-size: 1.2rem; }
     @media (min-width: 960px) { font-size: 1.5rem; }
@@ -26,38 +27,27 @@ blockquote { border-left: 0.5rem solid var(--dark); padding-left: 1rem; font-siz
     @media (min-width: 2000px) { width: 72rem; }
 }
 
-main {  }
-.container { padding: 0 1rem; 
-    @media (min-width: 540px) { padding: 0 2rem; }
-    @media (min-width: 720px) { padding: 0 4rem; }
-    @media (min-width: 1600px) { padding: 0 20rem; }
-    @media (min-width: 2000px) { padding: 0 30rem; }
-}
+img { max-width: 100%; }
 
-.row { display: flex; flex-direction: column; 
-    @media (min-width: 540px) { flex-direction: row; align-items: flex-start; }
-}
-    .col-1 { width: 58%; }
-    .col-2 { width: 38%; }
-
-.MainHeader { display: flex; justify-content: space-between; align-items: center; color: var(--dark); }
+header { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary); color: var(--dark); }
     .LogoContainer { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
         .LogoImg {  }
-        .LogoP {  }
+        .LogoP { color: var(--secondary); font-weight: bold; }
+        .LogoContainer:focus, .LogoContainer:hover { opacity: 0.8; }
     .MenuContainer {  }
         .HamburgerMenu { display: flex; flex-direction: column; gap: 0.4rem; padding-right: 1rem; cursor: pointer; transition: 0.2s;
             @media (min-width: 960px) { display: none; }
         }
-            .HamburgerMenu::before, .HamburgerMenu input, .HamburgerMenu::after { content: ""; width: 3.25rem; height: 0.75rem; border-radius: 1rem; background-color: var(--secondary); transition: 0.2s; }
+            .HamburgerMenu::before, .HamburgerMenu input, .HamburgerMenu::after { content: ""; width: 3.25rem; height: 0.5rem; border-radius: 1rem; background-color: var(--secondary); transition: 0.2s; }
             .HamburgerMenu input { margin: 0; padding: 0; appearance: none; outline: none; pointer-events: none; }
             .HamburgerMenu:has(input:checked).HamburgerMenu { overflow: hidden; }
             .HamburgerMenu:has(input:checked)::before { rotate: 45deg; transform: translate3d(5.5rem, 0, 0); }
-            .HamburgerMenu:has(input:checked) input { rotate: 235deg; background-color: var(--dark); }
-            .HamburgerMenu:has(input:checked)::after { rotate: 135deg; background-color: var(--dark); transform: translate3d(-0.8rem, 0.8rem, 0); }
+            .HamburgerMenu:has(input:checked) input { rotate: 230deg; background-color: var(--dark); height: 0.75rem; transform: translate3d(-0.2rem, 0rem, 0); }
+            .HamburgerMenu:has(input:checked)::after { rotate: 130deg; background-color: var(--dark); height: 0.75rem; transform: translate3d(-0.7rem, 0.7rem, 0); }
             .HamburgerMenu:has(input:checked) + .Menu {
-                @media (max-width: 959px) { display: block; position: absolute; top: 0; right: 8rem; bottom: 0; left: 0; }
+                @media (max-width: 959px) { display: block; position: absolute; top: 3.125rem; right: 0; bottom: 0; left: 0; text-align: center; }
             }
-            .HamburgerMenu:has(input:checked) + body { height: 100px; overflow: hidden; }
+                .HamburgerMenu:has(input:checked) + .Menu > .MenuList { background-color: var(--dark); }
         .Menu { display: none; position: absolute; margin: 0; padding: 0; background-color: var(--dark);
             @media (min-width: 960px) { display: flex; position: initial; transform: translate3d(0, 0, 0); background-color: var(--primary); }
         }
@@ -72,12 +62,76 @@ main {  }
                     .MenuListItem a:focus, .MenuListItem a:hover { background-color: var(--secondary); color: var(--light); }
                     .MenuListItem a:active { background-color: var(--cta); }
 
+main {  }
+
+footer { padding: 2rem 0; background-color: var(--dark); color: var(--light); text-align: center; }
+    footer a { color: var(--light); }
+    footer a:focus, footer a:hover { color: var(--primary); text-decoration: none; }
+
+.container { padding: 0 1rem; 
+    @media (min-width: 540px) { padding: 0 2rem; }
+    @media (min-width: 720px) { padding: 0 4rem; }
+    @media (min-width: 1600px) { padding: 0 10rem; }
+}
+
+.row { display: flex; flex-direction: column; 
+    @media (min-width: 768px) { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+}
+    .col-1 { 
+        @media (min-width: 768px) { width: 69%; }
+    }
+    .col-2 { 
+        @media (min-width: 768px) { max-width: 29%; }
+    }
+
+.SectionTitle { border-bottom: 4px solid var(--dark); }
+
+.CategoryTitle { position: sticky; top: 3.125rem; margin: 0; padding: 0.5rem; background-color: var(--dark); color: var(--light); }
+
+.active { background: linear-gradient(to top, var(--secondary) 10%, var(--primary) 10%); }
+
+.align-right {  
+    @media (min-width: 540px) { text-align: right; }
+}
+
+#aboutCite {
+    @media (min-width: 540px) { margin: 0; width: 50rem; }
+}
+
+/*T**********T*/
+/*|index.html|*/
+/*|**********|*/
+
+.HeroSection { padding-top: 1rem; padding-bottom: 1rem; background-color: var(--light); color: var(--dark); 
+    @media (min-width: 1080px) { padding-top: 8rem; padding-bottom: 8rem; }
+}
+    .HeroText {  }
+        .HeroMotto { margin: 0 -1rem; line-height: 1.25; text-align: center; 
+            @media (min-width: 400px) { margin: 0; text-align: left; }
+        }
+        .HeroP {  }
+        .HeroCTA { display: inline-block; margin-bottom: 3rem; border-radius: 1rem; padding: 1rem 3rem; background-color: var(--cta); color: var(--light); text-decoration: none; font-weight: bold; box-shadow: 0 1rem 1rem var(--dark); }
+            .HeroCTA:focus, .HeroCTA:hover { background-color: var(--dark); }
+            .HeroCTA:active { background-color: var(--cta); }
+    .HeroImg { border-radius: 1rem; box-shadow: 0 1rem 1rem var(--dark); }
+
+/*|**********|*/
+/*|index.html|*/
+/*U**********U*/
+
+/*T***********T*/
+/*|despre.html|*/
+/*|***********|*/
+
 .HeroParallax { position: relative; padding-top: 20rem; width: 100%; height: 150vw; background-color: var(--light); overflow: hidden; z-index: -1;
     @media (min-width: 380px) { padding-top: 30rem; height: 130vw; }
     @media (min-width: 580px) { padding-top: 40rem; height: 110vw; }
     @media (min-width: 720px) { padding-top: 50rem; height: 90vw; }
     @media (orientation: landscape) { padding-top: 52rem; height: 70vw; }
 }
+    .ParallaxText { position: fixed; top: 1rem; text-align: center; line-height: 1.25;
+        @media (min-width: 960px) { margin-top: 3rem; padding: 0 10rem; }
+    }
     .HeroParallax img { position: absolute; object-fit: cover; }
     #sun { bottom: 125vw; left: 50%; width: 7%; }
     #mountains { bottom: 100vw; width: 100%; }
@@ -87,17 +141,17 @@ main {  }
     #left { bottom: 0; left: 0; width: 25vw; }
     #book { bottom: 0; width: 100%; }
 
-.HeroAbout { margin-top: -4rem; padding-top: 4rem; background-color: var(--primary); }
-    .HeroAbout h2 { padding-top: 4rem; }
+.HeroAbout { background-color: var(--primary); }
+    .HeroAbout h2 { margin: 0; padding-top: 4rem; }
         .About { margin: 4rem 0;
-            @media (min-width: 540px) { display: flex; gap: 1rem; align-items: center; }
+            @media (min-width: 540px) { display: flex; gap: 1rem; justify-content: space-between; align-items: center; }
             @media (min-width: 1080px) { gap: 2rem; }
         }
             .AboutImg { display: block; flex-shrink: 0; margin: 3rem auto 2rem; border-radius: 50%; width: 18rem; height: 18rem; background-color: var(--dark);
                 @media (min-width: 540px) { margin: 0; width: 8rem; height: 8rem; }
                 @media (min-width: 960px) { width: 12rem; height: 12rem; }
             }
-            .AboutP { max-width: 80ch;
+            .AboutP { 
                 @media (min-width: 540px) {  }
             }
             .About p.Noah { 
@@ -110,6 +164,6 @@ main {  }
         .HeroImage { width: 100%; max-width: 25rem; }
     .EndingParagraph { padding-bottom: 4rem; }
 
-footer { padding: 2rem 0; background-color: var(--dark); color: var(--light); text-align: center; }
-    footer a { color: var(--light); }
-    footer a:focus, footer a:hover { color: var(--primary); text-decoration: none; }
+/*|***********|*/
+/*|despre.html|*/
+/*U***********U*/

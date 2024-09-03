@@ -15,8 +15,8 @@
     <title>DinBook | Acasa</title>
 </head>
 <body>
-    <header class="MainHeader container id="header">
-        <a class="LogoContainer" href="./" title="Mergi catre pagina principala, Acasa">
+    <header class="container" id="header">
+        <a class="LogoContainer" href="./" title="Mergi catre pagina principala">
             <img class="LogoImg" src="./assets/img/logo.svg" alt="DinBook logo with D and B letters on the opened book">
             <p class="LogoP">Din Book</p>
         </a>
@@ -26,28 +26,65 @@
             </label>
             <nav class="Menu">
                 <ul class="MenuList">
-                    <li class="MenuListItem"><a href="./" title="Mergi catre pagina principala">Acasa</a></li>
+                    <li class="MenuListItem active"><a href="./" title="Mergi catre pagina principala">Acasa</a></li>
                     <li class="MenuListItem"><a href="./despre.html" title="Mergi catre pagina informativa">Despre mine</a></li>
-                    <li class="MenuListItem"><a href="./#copii" title="Mergi catre categoria de carti: pentru copii">Carti pentru copii</a></li>
-                    <li class="MenuListItem"><a href="./#adulti" title="Mergi catre categoria de carti: pentru adulti">Carti pentru adulti</a></li>
-                    <li class="MenuListItem"><a href="./#educative" title="Mergi catre categoria de carti: educative">Carti educative</a></li>
+                    <li class="MenuListItem"><a href="#copii" title="Mergi catre aceasta categorie">Carti pentru copii</a></li>
+                    <li class="MenuListItem"><a href="#adulti" title="Mergi catre aceasta categorie">Carti pentru adulti</a></li>
+                    <li class="MenuListItem"><a href="#educative" title="Mergi catre aceasta categorie">Carti educative</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="HeroSection container">
-            <h1>Din Book</h1>
-            <p>Locul unde gasesti carti crestine si educative pentru orice varsta.</p>
-            <div class="row">
-                <p class="col-1">Cu ceva timp în urmă am descoperit o aplicație prin care să pot îndeplini orice îmi doream. Am început de la cele mai simple conținuturi până la realizarea unor cărți. Am dorit ca tot ce faceam să fie util atât pentru copilul meu cât și pentru alți copilași.</p>
-                <img class="col-2" src="./assets/img/h1.webp" alt="Fata intr-o rochie galben-verzuie pe o banca in parc">
+        <section class="HeroSection container row">
+            <div class="HeroText col-1">
+                <h1 class="HeroMotto">Locul unde gasesti carti crestine si educative pentru orice varsta.</h1>
+                <br>
+                <p class="HeroP">Cu ceva timp în urmă am descoperit o aplicație prin care să pot îndeplini orice îmi doream. Am început de la cele mai simple conținuturi până la realizarea unor cărți. Am dorit ca tot ce faceam să fie util atât pentru copilul meu cât și pentru alți copilași.</p>
+                <br>
+                <a class="HeroCTA" href="./despre.html" title="Vezi pagina despre mine!">Citeste mai mult...</a>
             </div>
+            <img class="col-2 HeroImg" src="./assets/img/h1.webp" width="400" height="auto" alt="Fata intr-o rochie galben-verzuie pe o banca in parc">
+        </section>
+        <section class="container">
+            <h2 class="SectionTitle">Categorii</h2>
+            <article id="copii">
+                <h5 class="CategoryTitle">Carti pentru copii</h5>
+                <p>Work in progress! Comming soon...</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ut neque veniam in magnam, ducimus autem repellat facere consequuntur, sequi nulla est libero exercitationem animi aspernatur, tempora quibusdam at sapiente.</p>
+            </article>
+            <article id="adulti">
+                <h5 class="CategoryTitle">Carti pentru adulti</h5>
+                <p>Work in progress! Comming soon...</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ut neque veniam in magnam, ducimus autem repellat facere consequuntur, sequi nulla est libero exercitationem animi aspernatur, tempora quibusdam at sapiente.</p>
+            </article>
+            <article id="educative">
+                <h5 class="CategoryTitle">Carti educative</h5>
+                <p>Work in progress! Comming soon...</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, doloremque dolorum autem nemo eos distinctio porro quibusdam fuga fugiat ipsa perferendis doloribus laborum? Eum deserunt, et necessitatibus mollitia suscipit culpa.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ut neque veniam in magnam, ducimus autem repellat facere consequuntur, sequi nulla est libero exercitationem animi aspernatur, tempora quibusdam at sapiente.</p>
+            </article>
         </section>
     </main>
     
     <footer>Copyright © 2024 <a href="https://indavid04.github.io/portofolio/" title="Vezi portofoliul creatorului paginii">INDavid04</a></footer>
-    <script src="./assets/script.js"></script>
 </body>
 </html>
