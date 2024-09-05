@@ -27,13 +27,16 @@ blockquote { border-left: 0.5rem solid var(--dark); padding-left: 1rem; font-siz
     @media (min-width: 2000px) { width: 72rem; }
 }
 
+a { color: var(--cta); }
+a:hover { text-decoration: none; }
+
 img { max-width: 100%; }
 
-header { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary); color: var(--dark); }
+header { z-index: 2; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary); color: var(--dark); }
     .LogoContainer { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
         .LogoImg {  }
         .LogoP { color: var(--secondary); font-weight: bold; }
-        .LogoContainer:focus, .LogoContainer:hover { opacity: 0.8; }
+        .LogoContainer:focus, .LogoContainer:hover, .HamburgerMenu:focus, .HamburgerMenu:hover { opacity: 0.8; }
     .MenuContainer {  }
         .HamburgerMenu { display: flex; flex-direction: column; gap: 0.4rem; padding-right: 1rem; cursor: pointer; transition: 0.2s;
             @media (min-width: 960px) { display: none; }
@@ -62,11 +65,30 @@ header { position: sticky; top: 0; z-index: 2; display: flex; justify-content: s
                     .MenuListItem a:focus, .MenuListItem a:hover { background-color: var(--secondary); color: var(--light); }
                     .MenuListItem a:active { background-color: var(--cta); }
 
-main {  }
-
-footer { padding: 2rem 0; background-color: var(--dark); color: var(--light); text-align: center; }
-    footer a { color: var(--light); }
-    footer a:focus, footer a:hover { color: var(--primary); text-decoration: none; }
+footer { padding: 2rem 0; background-color: var(--primary); font-size: 1.2rem; }
+    .FooterRow { 
+        @media (min-width: 540px) { display: flex; align-items: flex-start; justify-content: space-between; }
+    }
+        .FooterLogo { text-align: center; text-decoration: none; color: var(--dark); }
+            .FooterLogo:focus, .FooterLogo:hover { opacity: 0.8; }
+            .FooterLogoImg { width: 12rem; 
+                @media (min-width: 540px) { width: 8rem; }
+            }
+            .FooterLogoText { margin: 0; }
+        .FooterPages {  }
+            .FooterTitle { margin-bottom: 0;
+                @media (min-width: 540px) { margin-top: 0; }
+            }
+            .FooterList { margin: 0; padding-left: 1rem; list-style: none; }
+                .FooterListItem {  }
+                    .FooterLink { display: flex; align-items: center; gap: 0.2rem; color: var(--secondary); }
+                        .FooterLink:focus, .FooterLink:hover { color: var(--cta); }
+                        .FooterLink svg {  }
+                        .FooterLink span {  }
+        .FooterSocial { margin-bottom: 2rem; }
+    .FooterCopyright { font-size: 1.2rem; text-align: center; max-width: unset; }
+        .FooterCopyLink { font-weight: bold; }
+            .FooterCopyLink:focus, .FooterCopyLink:hover { color: var(--secondary); }
 
 .container { padding: 0 1rem; 
     @media (min-width: 540px) { padding: 0 2rem; }
@@ -86,9 +108,14 @@ footer { padding: 2rem 0; background-color: var(--dark); color: var(--light); te
 
 .SectionTitle { border-bottom: 4px solid var(--dark); }
 
-.CategoryTitle { position: sticky; top: 3.125rem; margin: 0; padding: 0.5rem; background-color: var(--dark); color: var(--light); }
+.CategoryTitle { display: flex; position: sticky; top: 0; margin: 0; padding: 0; background-color: var(--dark); color: var(--light); }
+    .CategoryName { padding: 0.5rem; width: 33.33%; text-align: center; }
+    .CategoryLink { background-color: var(--cta); color: var(--light); text-decoration: none; }
+    .CategoryLink:focus, .CategoryLink:hover { opacity: .8; }
 
-.active { background: linear-gradient(to top, var(--secondary) 10%, var(--primary) 10%); }
+.active {  background-color: var(--secondary);
+    @media (min-width: 960px) { background: linear-gradient(to top, var(--secondary) 10%, var(--primary) 10%); }
+}
 
 .align-right {  
     @media (min-width: 540px) { text-align: right; }
@@ -110,10 +137,12 @@ footer { padding: 2rem 0; background-color: var(--dark); color: var(--light); te
             @media (min-width: 400px) { margin: 0; text-align: left; }
         }
         .HeroP {  }
-        .HeroCTA { display: inline-block; margin-bottom: 3rem; border-radius: 1rem; padding: 1rem 3rem; background-color: var(--cta); color: var(--light); text-decoration: none; font-weight: bold; box-shadow: 0 1rem 1rem var(--dark); }
+        .HeroCTA { display: inline-block; margin-bottom: 3rem; padding: 1.5rem 0; width: 100%; background-color: var(--cta); color: var(--light); text-align: center; text-decoration: none; font-weight: bold; box-shadow: 0 0 5px var(--dark); 
+            @media (min-width: 768px) { width: initial; padding: 1.5rem 3rem; }
+        }
             .HeroCTA:focus, .HeroCTA:hover { background-color: var(--dark); }
             .HeroCTA:active { background-color: var(--cta); }
-    .HeroImg { border-radius: 1rem; box-shadow: 0 1rem 1rem var(--dark); }
+    .HeroImg { box-shadow: 0 0 5px var(--dark); }
 
 /*|**********|*/
 /*|index.html|*/
