@@ -6,18 +6,12 @@
     --dark: #1b2021;
 }
 
-@font-face {
-    font-family: 'Figtree';
-    src: url('./assets/font/Figtree-VariableFont_wght.ttf');
-}
-
 body { margin: 0; padding: 0; background-color: var(--light); color: var(--dark); font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.8; scroll-behavior: smooth; }
 
 h1 { font-size: clamp(3.15rem, 4vw, 5.61rem); }
-h2 { font-size: clamp(2.36rem, 5vw, 3.15rem); }
-h3 { font-size: clamp(1.77rem, 5vw, 2.36rem); }
-h4 { font-size: clamp(1.33rem, 5vw, 1.77rem); }
-h5 { font-size: clamp(1.00rem, 5vw, 1.33rem); }
+h2 { font-size: clamp(1.77rem, 5vw, 3.15rem); }
+h3 { font-size: clamp(1.33rem, 5vw, 1.77rem); }
+h4 { font-size: clamp(1.00rem, 5vw, 1.33rem); }
 p { font-size: clamp(1.00rem, 5vw, 1.33rem); margin: 0; max-width: 80ch; }
 
 blockquote { border-left: 0.5rem solid var(--dark); padding-left: 1rem; font-size: 1rem; 
@@ -31,64 +25,6 @@ a { color: var(--cta); }
 a:hover { text-decoration: none; }
 
 img { max-width: 100%; }
-
-header { z-index: 2; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary); color: var(--dark); }
-    .LogoContainer { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
-        .LogoImg {  }
-        .LogoP { color: var(--secondary); font-weight: bold; }
-        .LogoContainer:focus, .LogoContainer:hover, .HamburgerMenu:focus, .HamburgerMenu:hover { opacity: 0.8; }
-    .MenuContainer {  }
-        .HamburgerMenu { display: flex; flex-direction: column; gap: 0.4rem; padding-right: 1rem; cursor: pointer; transition: 0.2s;
-            @media (min-width: 960px) { display: none; }
-        }
-            .HamburgerMenu::before, .HamburgerMenu input, .HamburgerMenu::after { content: ""; width: 3.25rem; height: 0.5rem; border-radius: 1rem; background-color: var(--secondary); transition: 0.2s; }
-            .HamburgerMenu input { margin: 0; padding: 0; appearance: none; outline: none; pointer-events: none; }
-            .HamburgerMenu:has(input:checked).HamburgerMenu { overflow: hidden; }
-            .HamburgerMenu:has(input:checked)::before { rotate: 45deg; transform: translate3d(5.5rem, 0, 0); }
-            .HamburgerMenu:has(input:checked) input { rotate: 230deg; background-color: var(--dark); height: 0.75rem; transform: translate3d(-0.2rem, 0rem, 0); }
-            .HamburgerMenu:has(input:checked)::after { rotate: 130deg; background-color: var(--dark); height: 0.75rem; transform: translate3d(-0.7rem, 0.7rem, 0); }
-            .HamburgerMenu:has(input:checked) + .Menu {
-                @media (max-width: 959px) { display: block; position: absolute; top: 3.125rem; right: 0; bottom: 0; left: 0; text-align: center; }
-            }
-                .HamburgerMenu:has(input:checked) + .Menu > .MenuList { background-color: var(--dark); }
-        .Menu { display: none; position: absolute; margin: 0; padding: 0; background-color: var(--dark);
-            @media (min-width: 960px) { display: flex; position: initial; transform: translate3d(0, 0, 0); background-color: var(--primary); }
-        }
-            .MenuList { margin: 0; padding: 0;
-                @media (min-width: 960px) { display: flex; list-style: none; }
-            }
-                .MenuListItem { display: flex; align-items: center; gap: 2rem; text-decoration: none; transition: 0.2s; list-style: none; transition: 0.2s; }
-                    .MenuListItem:hover {  }
-                    .MenuListItem a { display: inline-block; padding: 1rem; width: 100%; text-decoration: none; color: var(--light); 
-                        @media (min-width: 960px) { color: var(--dark); }
-                    }
-                    .MenuListItem a:focus, .MenuListItem a:hover { background-color: var(--secondary); color: var(--light); }
-                    .MenuListItem a:active { background-color: var(--cta); }
-
-footer { padding: 2rem 0; background-color: var(--primary); font-size: 1.2rem; }
-    .FooterRow { 
-        @media (min-width: 540px) { display: flex; align-items: flex-start; justify-content: space-between; }
-    }
-        .FooterLogo { text-align: center; text-decoration: none; color: var(--dark); }
-            .FooterLogo:focus, .FooterLogo:hover { opacity: 0.8; }
-            .FooterLogoImg { width: 12rem; 
-                @media (min-width: 540px) { width: 8rem; }
-            }
-            .FooterLogoText { margin: 0; }
-        .FooterPages {  }
-            .FooterTitle { margin-bottom: 0;
-                @media (min-width: 540px) { margin-top: 0; }
-            }
-            .FooterList { margin: 0; padding-left: 1rem; list-style: none; }
-                .FooterListItem {  }
-                    .FooterLink { display: flex; align-items: center; gap: 0.2rem; color: var(--secondary); }
-                        .FooterLink:focus, .FooterLink:hover { color: var(--cta); }
-                        .FooterLink svg {  }
-                        .FooterLink span {  }
-        .FooterSocial { margin-bottom: 2rem; }
-    .FooterCopyright { font-size: 1.2rem; text-align: center; max-width: unset; }
-        .FooterCopyLink { font-weight: bold; }
-            .FooterCopyLink:focus, .FooterCopyLink:hover { color: var(--secondary); }
 
 .container { padding: 0 1rem; 
     @media (min-width: 540px) { padding: 0 2rem; }
@@ -106,15 +42,8 @@ footer { padding: 2rem 0; background-color: var(--primary); font-size: 1.2rem; }
         @media (min-width: 768px) { max-width: 29%; }
     }
 
-.SectionTitle { border-bottom: 4px solid var(--dark); }
-
-.CategoryTitle { display: flex; position: sticky; top: 0; margin: 0; padding: 0; background-color: var(--dark); color: var(--light); }
-    .CategoryName { padding: 0.5rem; width: 33.33%; text-align: center; }
-    .CategoryLink { background-color: var(--cta); color: var(--light); text-decoration: none; }
-    .CategoryLink:focus, .CategoryLink:hover { opacity: .8; }
-
-.active {  background-color: var(--secondary);
-    @media (min-width: 960px) { background: linear-gradient(to top, var(--secondary) 10%, var(--primary) 10%); }
+.active { display: flex; justify-content: center; padding: 1rem; color: var(--light);
+    @media (min-width: 600px) { padding: 0 2rem; background-color: var(--dark); color: var(--light); }
 }
 
 .align-right {  
@@ -125,16 +54,77 @@ footer { padding: 2rem 0; background-color: var(--primary); font-size: 1.2rem; }
     @media (min-width: 540px) { margin: 0; width: 50rem; }
 }
 
-/*T**********T*/
-/*|index.html|*/
-/*|**********|*/
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 5px solid var(--dark); }
+    .LogoContainer { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+        .LogoImg {  }
+        .LogoP { color: var(--dark); font-size: 1.4rem; font-weight: bold; }
+        .LogoContainer:focus, .LogoContainer:hover { opacity: 0.8; }
+    .MenuContainer {  }
+        .HamburgerMenu { display: flex; flex-direction: column; gap: 0.4rem; padding-right: 1rem; cursor: pointer; transition: 0.2s;
+            @media (min-width: 600px) { display: none; }
+        }
+            .HamburgerMenu::before, .HamburgerMenu input, .HamburgerMenu::after { content: ""; width: 3.25rem; height: 0.5rem; border-radius: 1rem; background-color: var(--dark); transition: 0.2s; }
+            .HamburgerMenu input { margin: 0; padding: 0; appearance: none; outline: none; pointer-events: none; }
+            .HamburgerMenu:has(input:checked).HamburgerMenu { overflow: hidden; }
+            .HamburgerMenu:has(input:checked)::before { rotate: 45deg; transform: translate3d(5.5rem, 0, 0); }
+            .HamburgerMenu:has(input:checked) input { rotate: 230deg; background-color: var(--dark); height: 0.75rem; transform: translate3d(-0.2rem, 0rem, 0); }
+            .HamburgerMenu:has(input:checked)::after { rotate: 130deg; background-color: var(--dark); height: 0.75rem; transform: translate3d(-0.7rem, 0.7rem, 0); }
+            .HamburgerMenu:has(input:checked) + .Menu {
+                @media (max-width: 599px) { display: block; position: absolute; top: 3.375rem; right: 0; bottom: 0; left: 0; text-align: center; }
+            }
+                .HamburgerMenu:has(input:checked) + .Menu > .MenuList { background-color: var(--dark); }
+        .Menu { display: none; position: absolute; margin: 0; padding: 0; background-color: var(--light);
+            @media (min-width: 600px) { display: flex; position: initial; transform: translate3d(0, 0, 0); color: var(--light); }
+        }
+            .MenuList { margin: 0; padding: 0;
+                @media (min-width: 600px) { display: flex; list-style: none; }
+            }
+                .MenuListItem { display: flex; align-items: center; gap: 2rem; text-decoration: none; transition: 0.2s; list-style: none; transition: 0.2s; }
+                    .MenuListItem:hover {  }
+                    .MenuListItem a { display: inline-block; padding: 1rem; width: 100%; text-decoration: none; background-color: var(--light); color: var(--dark); }
+                    .MenuListItem a:focus, .MenuListItem a:hover { background-color: var(--cta); color: var(--light); }
+
+footer { padding: 2rem 0; background-color: var(--light); font-size: 1.2rem; text-align: center; }
+    .FooterRow {
+        @media (min-width: 540px) { display: flex; align-items: flex-start; justify-content: space-between; }
+    }
+        .FooterLogo { text-decoration: none; color: var(--dark); }
+            .FooterLogo:focus, .FooterLogo:hover { opacity: 0.8; }
+            .FooterLogoImg { display: block; margin: 0 auto; width: 12rem; 
+                @media (min-width: 540px) { width: 8rem; }
+            }
+            .FooterLogoText { margin: 0; }
+        .FooterPages {  }
+            .FooterTitle { margin-bottom: 0;
+                @media (min-width: 540px) { margin-top: 0; }
+            }
+            .FooterList { display: flex; flex-direction: column; align-items: flex-start; margin: 0; padding: 0; width: 100%; list-style: none; 
+                @media (min-width: 540px) { padding-left: 1rem; }
+            }
+                .FooterListItem {  margin: 0 auto;
+                    @media (min-width: 540px) { margin: 0; }
+                }
+                    .FooterLink { display: flex; justify-content: center; align-items: center; gap: 0.2rem; padding: 0.5rem 0; width: 100%;
+                        @media (min-width: 540px) { padding: 0; }
+                    }
+                        .FooterLink:focus, .FooterLink:hover { color: var(--cta); }
+                        .FooterLink svg {  }
+                        .FooterLink span {  }
+        .FooterSocial { margin-bottom: 2rem; }
+    .FooterCopyright { font-size: 1.2rem; max-width: unset; }
+        .FooterCopyLink { font-weight: bold; }
+            .FooterCopyLink:focus, .FooterCopyLink:hover { color: var(--secondary); }
+
+/************/
+/*index.html*/
+/************/
 
 .HeroSection { padding-top: 1rem; padding-bottom: 1rem; background-color: var(--light); color: var(--dark); 
     @media (min-width: 1080px) { padding-top: 8rem; padding-bottom: 8rem; }
 }
     .HeroText {  }
         .HeroMotto { margin: 0 -1rem; line-height: 1.25; text-align: center; 
-            @media (min-width: 400px) { margin: 0; text-align: left; }
+            @media (min-width: 768px) { margin: 0; text-align: left; }
         }
         .HeroP {  }
         .HeroCTA { display: inline-block; margin-bottom: 3rem; padding: 1.5rem 0; width: 100%; background-color: var(--cta); color: var(--light); text-align: center; text-decoration: none; font-weight: bold; box-shadow: 0 0 5px var(--dark); 
@@ -142,15 +132,32 @@ footer { padding: 2rem 0; background-color: var(--primary); font-size: 1.2rem; }
         }
             .HeroCTA:focus, .HeroCTA:hover { background-color: var(--dark); }
             .HeroCTA:active { background-color: var(--cta); }
-    .HeroImg { box-shadow: 0 0 5px var(--dark); }
+    .HeroImg { margin: 0 auto; box-shadow: 0 0 5px var(--dark);
+        @media (min-width: 768px) { margin: 0; }
+    }
 
-/*|**********|*/
-/*|index.html|*/
-/*U**********U*/
+.CategorySection { background-color: var(--light); }
+    .SectionTitle { border-bottom: 4px solid var(--dark); }
+    .Category {  }
+        .CategoryTitle { display: flex; position: sticky; top: 0; margin: 0; padding: 0; background-color: var(--dark); color: var(--light); }
+            .CategoryName { padding: 0; width: 33.33%; text-align: center; }
+            .CategoryLink { background-color: var(--cta); color: var(--light); text-decoration: none; }
+            .CategoryLink:focus, .CategoryLink:hover { opacity: .8; }
+        .Books {  }
+            .Book { margin: 0.5rem 0; padding: 0.5rem; border: 5px solid var(--dark);
+                @media (min-width: 600px) { display: flex; align-items: flex-start; gap: 1rem; }
+            }
+                .BookImg { width: 100%; 
+                    @media (min-width: 600px) { width: 20%; }
+                }
+                    .BookImg img { height: 100%; width: 100%; }
+                .BookDescription { 
+                    @media (min-width: 600px) { width: 80%; }
+                }
 
-/*T***********T*/
-/*|despre.html|*/
-/*|***********|*/
+/**************************/
+/*index.html | despre.html*/
+/**************************/
 
 .HeroParallax { position: relative; padding-top: 20rem; width: 100%; height: 150vw; background-color: var(--light); overflow: hidden; z-index: -1;
     @media (min-width: 380px) { padding-top: 30rem; height: 130vw; }
@@ -176,7 +183,7 @@ footer { padding: 2rem 0; background-color: var(--primary); font-size: 1.2rem; }
             @media (min-width: 540px) { display: flex; gap: 1rem; justify-content: space-between; align-items: center; }
             @media (min-width: 1080px) { gap: 2rem; }
         }
-            .AboutImg { display: block; flex-shrink: 0; margin: 3rem auto 2rem; border-radius: 50%; width: 18rem; height: 18rem; background-color: var(--dark);
+            .AboutImg { display: block; flex-shrink: 0; margin: 3rem auto 2rem; border-radius: 50%; width: 18rem; height: 18rem; background-color: var(--dark); overflow: hidden;
                 @media (min-width: 540px) { margin: 0; width: 8rem; height: 8rem; }
                 @media (min-width: 960px) { width: 12rem; height: 12rem; }
             }
@@ -193,6 +200,6 @@ footer { padding: 2rem 0; background-color: var(--primary); font-size: 1.2rem; }
         .HeroImage { width: 100%; max-width: 25rem; }
     .EndingParagraph { padding-bottom: 4rem; }
 
-/*|***********|*/
-/*|despre.html|*/
-/*U***********U*/
+/*************/
+/*despre.html*/
+/*************/
